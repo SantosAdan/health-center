@@ -1,0 +1,31 @@
+{
+  "orgName": "Health Center | Development Org",
+  "edition": "Developer",
+  "adminEmail": "adan@blackthorn.io",
+  "features": [
+    "EnableSetPasswordInApi",
+    "DebugApex",
+    "PersonAccounts",
+    "PlatformCache"
+  ],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "securitySettings": {
+      "sessionSettings": {
+        "sessionTimeout": "TwelveHours",
+        "disableTimeoutWarning": true,
+        "enableSMSIdentity": false,
+        "identityConfirmationOnTwoFactorRegistrationEnabled": false
+      }
+    },
+    "nameSettings": {
+      "enableMiddleName": false,
+      "enableNameSuffix": false
+    }
+  }
+}
