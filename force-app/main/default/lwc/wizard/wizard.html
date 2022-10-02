@@ -1,0 +1,30 @@
+<template>
+    <div class="c-container">
+        <div class="slds-builder-toolbar wizard_toolbar-fixed" role="toolbar">
+            <div class="slds-builder-toolbar__actions" aria-label="Wizard actions">
+                <button class="slds-button slds-button_neutral">Run</button>
+                <lightning-button variant="brand-outline" icon-name="utility:save" title="Save" label="Save" class="slds-var-m-left_xx-small"></lightning-button>
+                <lightning-button variant="brand" icon-name="utility:save" title="Save and Preview" label="Save & Preview" class="slds-var-m-left_xx-small"></lightning-button>
+            </div>
+        </div>
+
+        <lightning-layout>
+            <lightning-layout-item size="3" class="wizard_vertical-navigation">
+                <c-wizard-vertical-navigation></c-wizard-vertical-navigation>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="9" class="wizard_main-content">
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item size="1"></lightning-layout-item>
+                    <lightning-layout-item size="10">
+                        <section class="slds-var-m-top_xx-large">&nbsp;</section>
+                        <section class="slds-var-m-top_large">
+                            <c-wizard-venue-section onselect={handleVenueChange}></c-wizard-venue-section>
+                        </section>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="1"></lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

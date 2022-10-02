@@ -1,0 +1,19 @@
+.c-container {
+    background-color: white;
+    margin: -0.75rem;
+}
+
+.wizard_vertical-navigation {
+    height: 100vh;
+}
+
+.wizard_main-content {
+    background-color: #d8eafa;
+    overflow-y: hidden;
+}
+
+.wizard_toolbar-fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}

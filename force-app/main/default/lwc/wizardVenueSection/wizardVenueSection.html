@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Venue" icon-name="utility:checkin">
+        <div class="slds-var-m-around_small">
+            <lightning-record-edit-form object-api-name={doctorAppointmentApiName}>
+                <lightning-input-field field-name={fields.venue} onchange={handleChange}></lightning-input-field>
+            </lightning-record-edit-form>
+        </div>
+    
+        <template if:false={venueSelected}>
+            <section class="slds-align_absolute-center">
+                <p class="slds-text-title_caps">Select a venue to see it on the map.</p>
+            </section>
+        </template>
+    
+        <template if:true={venueSelected}>
+            <lightning-layout>
+                <lightning-layout-item size="4">
+                    <section aria-label="Venue Map Section">
+                        <lightning-map map-markers={mapMarkers} zoom-level="15" class="wizard_venue-map-container"></lightning-map>
+                    </section>
+                </lightning-layout-item>
+                <lightning-layout-item size="8" class="slds-var-p-left_small">
+                    <lightning-record-edit-form object-api-name={accountApiName} record-id={venueId}>
+                        <lightning-input-field field-name={fields.venueAddress} disabled></lightning-input-field>
+                    </lightning-record-edit-form>
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+
+        <footer slot="footer">
+            <lightning-button class="slds-var-m-right_small" variant="brand-outline" label="Previous" onclick={handlePrevious} disabled></lightning-button>
+            <lightning-button variant="brand-outline" label="Next" onclick={handleNext}></lightning-button>
+        </footer>
+    </lightning-card>
+</template>
