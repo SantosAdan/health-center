@@ -1,0 +1,11 @@
+<template>
+    <li class={isActiveClass}>
+        <a href="#" class="slds-nav-vertical__action" aria-current={stage.active} onclick={handleClick}>
+            <lightning-icon class="slds-var-m-right_small" icon-name={stage.icon} size="x-small" title={stage.label}></lightning-icon>
+            <span>{stage.label}</span>
+            <span if:true={stage.completed} class="slds-col_bump-left">
+                <lightning-icon icon-name="utility:check" size="xx-small" variant="success" title="Checked"></lightning-icon>
+            </span>
+        </a>
+    </li>
+</template>
